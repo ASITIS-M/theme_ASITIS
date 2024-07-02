@@ -9,7 +9,7 @@ init <- function(){
   assign("png", custom_png, envir = .GlobalEnv)
   
   # inicializace písma Nunito
-  showtext::font_add_google("Nunito", "nunito")
+  sysfonts::font_add_google("Nunito", "nunito")
   showtext::showtext_auto()
   showtext::showtext_opts(dpi = 96)
 }
