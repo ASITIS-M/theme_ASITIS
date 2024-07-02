@@ -8,21 +8,21 @@
 printA <- function(p = NA){
   
   obd <- grid::roundrectGrob(
-    x = unit(0.5, "npc"), y = unit(0.5, "npc"),
-    width = unit(1, "npc"), height = unit(1, "npc"),
-    r = unit(0.2, "npc"), gp = grid::gpar(fill = "#e6ebed", col = "#e6ebed")
+    x = grid::unit(0.5, "npc"), y = grid::unit(0.5, "npc"),
+    width = grid::unit(1, "npc"), height = grid::unit(1, "npc"),
+    r = grid::unit(0.2, "npc"), gp = grid::gpar(fill = "#e6ebed", col = "#e6ebed")
   )
   
   obd1 <- grid::roundrectGrob(
-    x = unit(0.25, "npc"), y = unit(0.75, "npc"),
-    width = unit(0.5, "npc"), height = unit(0.5, "npc"),
-    r = unit(0.1, "npc"), gp = grid::gpar(fill = "#e6ebed", col = "#e6ebed")
+    x = grid::unit(0.25, "npc"), y = grid::unit(0.75, "npc"),
+    width = grid::unit(0.5, "npc"), height = grid::unit(0.5, "npc"),
+    r = grid::unit(0.1, "npc"), gp = grid::gpar(fill = "#e6ebed", col = "#e6ebed")
   )
   
   obd2 <- grid::roundrectGrob(
-    x = unit(0.75, "npc"), y = unit(0.25, "npc"),
-    width = unit(0.5, "npc"), height = unit(0.5, "npc"),
-    r = unit(0.1, "npc"), gp = grid::gpar(fill = "#e6ebed", col = "#e6ebed")
+    x = grid::unit(0.75, "npc"), y = grid::unit(0.25, "npc"),
+    width = grid::unit(0.5, "npc"), height = grid::unit(0.5, "npc"),
+    r = grid::unit(0.1, "npc"), gp = grid::gpar(fill = "#e6ebed", col = "#e6ebed")
   )
   
   p <- p + ggplot2::theme(plot.margin = margin(t = 0.04, r = 0.07, b = 0.03, l = 0.035, unit = "npc"),
@@ -47,6 +47,6 @@ printA <- function(p = NA){
   
   
   grid::grid.newpage()
-  kombo <- grid::gTree(children = gList(obd, obd1, obd2, pa))
+  kombo <- grid::gTree(children = grid::gList(obd, obd1, obd2, pa))
   grid::grid.draw(kombo)
 }
