@@ -1,0 +1,52 @@
+#' printA
+#' Printing ggplot with rectangular background with rounded corners 
+#'
+#' @param p ggplot object
+#' @examples 
+#' printA(ggplot(df <- data.frame(x <- 1:2, y = 1:2), aes(x = x))+geom_line(aes(y = y))+theme_ASITIS())
+#' @export
+printA <- function(p = NA){
+  
+  obd <- grid::roundrectGrob(
+    x = unit(0.5, "npc"), y = unit(0.5, "npc"),
+    width = unit(1, "npc"), height = unit(1, "npc"),
+    r = unit(0.2, "npc"), gp = grid::gpar(fill = "#e6ebed", col = "#e6ebed")
+  )
+  
+  obd1 <- grid::roundrectGrob(
+    x = unit(0.25, "npc"), y = unit(0.75, "npc"),
+    width = unit(0.5, "npc"), height = unit(0.5, "npc"),
+    r = unit(0.1, "npc"), gp = grid::gpar(fill = "#e6ebed", col = "#e6ebed")
+  )
+  
+  obd2 <- grid::roundrectGrob(
+    x = unit(0.75, "npc"), y = unit(0.25, "npc"),
+    width = unit(0.5, "npc"), height = unit(0.5, "npc"),
+    r = unit(0.1, "npc"), gp = grid::gpar(fill = "#e6ebed", col = "#e6ebed")
+  )
+  
+  p <- p + ggplot2::theme(plot.margin = margin(t = 0.04, r = 0.07, b = 0.03, l = 0.035, unit = "npc"),
+                 text = element_text(family = "nunito", color = "black"),
+                 panel.border = element_rect(color = "#e6ebed"),
+                 axis.ticks = element_line(color = "#96acb5"),
+                 axis.text = element_text(color = "#58595b")
+  )
+  
+  if(is.null(dev.list())){
+    png("temp")
+    showtext::showtext_begin()
+    pa <- ggplot2::ggplotGrob(p)
+    showtext::showtext_auto()
+    dev.off()
+  }
+  else {
+    showtext::showtext_begin()
+    pa <- ggplot2::ggplotGrob(p)
+    showtext::showtext_auto()
+  }
+  
+  
+  grid::grid.newpage()
+  kombo <- grid::gTree(children = gList(obd, obd1, obd2, pa))
+  grid::grid.draw(kombo)
+}
