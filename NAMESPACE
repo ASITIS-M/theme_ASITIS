@@ -2,5 +2,6 @@
 
 export(asitis_init)
 export(custom_png)
+export(init)
 export(printA)
 export(theme_ASITIS)
