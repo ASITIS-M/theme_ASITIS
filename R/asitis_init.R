@@ -1,9 +1,10 @@
 #' Initialisation of Nunito font, Cairo bitmap printing type
+#' You can use asitis_init() or just init()
 #'
 #' @examples 
-#' init()
+#' asitis_init()
 #' @export
-init <- function(){
+asitis_init <- function(){
   options(bitmapType = "cairo")
   
   assign("png", custom_png, envir = .GlobalEnv)
@@ -13,3 +14,5 @@ init <- function(){
   showtext::showtext_auto()
   showtext::showtext_opts(dpi = 96)
 }
+
+init <- asitis_init
