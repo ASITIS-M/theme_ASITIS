@@ -5,7 +5,13 @@
 \title{ASITIS company ggplot theme
 verze 1.2.1}
 \usage{
-theme_ASITIS(angle.x = FALSE, title.on.center = FALSE)
+theme_ASITIS(
+  angle.x = FALSE,
+  title.on.center = FALSE,
+  no.grid = FALSE,
+  double.axis = FALSE,
+  double.axis.reverse = FALSE
+)
 }
 \arguments{
 \item{angle.x}{boolean, if true, values on x axis will be 15° slanted}

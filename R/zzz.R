@@ -1,4 +1,4 @@
 .onAttach <- function(libname, pkgname) {
-  packageStartupMessage("Verze", packageVersion(pkgname), 
-                        " balíčku ", pkgname, "; pro nastavení fontu použijte funkci asitis_init()")
+  packageStartupMessage("Verze ", packageVersion(pkgname), 
+                        " balíčku ", pkgname, ". Pro přednastavení fontu použijte funkci asitis_init()")
 }
