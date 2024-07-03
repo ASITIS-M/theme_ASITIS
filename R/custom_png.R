@@ -16,7 +16,7 @@ custom_png <- function(filename = "Rplot%03d.png",
                        type = "cairo", antialias = c("default", "none", "cleartype", "gray", "subpixel"),
                        symbolfamily="default"){
   grDevices::png(filename = filename,
-                 width = width, height = height, units = units, pointsize = 2*pointsize,
+                 width = width, height = height, units = units, pointsize = pointsize,
                  bg = bg, res = res, family = family, restoreConsole = restoreConsole,
                  type = type, antialias = antialias,
                  symbolfamily=symbolfamily)
