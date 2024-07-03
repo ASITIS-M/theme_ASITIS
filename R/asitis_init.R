@@ -15,6 +15,8 @@ asitis_init <- function(){
   showtext::showtext_opts(dpi = 96)
   
   print("font Nunito nahrán jako 'nunito', dpi = 96")
+  
+  i = 1
 }
 
 

@@ -21,7 +21,7 @@ theme_ASITIS <- function(angle.x = FALSE,
                    axis.text=element_text(size=15, color = "#58595b"),
                    strip.placement = "outside",
                    text = element_text(family = "nunito", color = "black"),
-                   panel.border = element_rect(color = "#96acb5"),
+                   panel.border = element_rect(color = "#58595b"),
                    axis.ticks = element_line(color = "#96acb5"),
                    plot.title = element_text(size = 25),
                    plot.subtitle = element_text(size = 20),
@@ -31,6 +31,7 @@ theme_ASITIS <- function(angle.x = FALSE,
                    legend.text = element_text(size = 15),
                    legend.justification="left",
                    legend.direction = "vertical",
+                   legend.key = element_blank(),
                    legend.background = element_blank()
                    )
   

@@ -89,7 +89,7 @@ printA(
     theme_ASITIS(angle.x = T)
 )
 
-ip <- ggplot(data_vse[which(data_vse$hodnota >-1),], aes(x = obdobi_txt)) +
+p <- ggplot(data_vse[which(data_vse$hodnota >-1),], aes(x = obdobi_txt)) +
   geom_col(aes(y = hodnota), fill = ifelse(data_vse$obdobi_txt == "Nezjištěno", "#9e9fa0", "#6297cc"), linewidth = 0.5, position = "dodge")+
   geom_text(aes(y = hodnota, label = hodnota), position = position_stack(vjust = 0.5, reverse = T), colour = ifelse(data_vse$obdobi_txt == "Nezjištěno", "black", "black"), size = 5)+
   ggtitle(paste("Období výstavby domů v obci", obec))+
