@@ -27,6 +27,7 @@ printA <- function(p = NA){
   
   p <- p + ggplot2::theme(plot.margin = margin(t = 0.04, r = 0.07, b = 0.03, l = 0.035, unit = "npc"),
                  panel.border = element_rect(color = "#e6ebed"),
+                 plot.background = element_blank(),
                  #axis.ticks = element_line(color = "#96acb5"),
                  #axis.text = element_text(color = "#58595b")
   )
