@@ -1,4 +1,4 @@
-#' Initialisation of Nunito font, Cairo bitmap printing type
+#' Initialisation of Nunito font (by showtext), Cairo bitmap printing type, assigning function custom_png to png function name (instead of png from grDevices), assigning value 1 to variable i
 #' You can use asitis_init() or just init()
 #'
 #' @examples 
@@ -16,11 +16,11 @@ asitis_init <- function(){
   
   print("font Nunito nahrán jako 'nunito', dpi = 96")
   
-  i = 1
+  assign("i", 1)
 }
 
 
-#' Initialisation of Nunito font, Cairo bitmap printing type
+#' Initialisation of Nunito font (by showtext), Cairo bitmap printing type, assigning function custom_png to png function name (instead of png from grDevices), assigning value 1 to variable i
 #' You can use asitis_init() or just init()
 #'
 #' @examples 

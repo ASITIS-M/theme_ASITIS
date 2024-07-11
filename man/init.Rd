@@ -2,13 +2,13 @@
 % Please edit documentation in R/asitis_init.R
 \name{init}
 \alias{init}
-\title{Initialisation of Nunito font, Cairo bitmap printing type
+\title{Initialisation of Nunito font (by showtext), Cairo bitmap printing type, assigning function custom_png to png function name (instead of png from grDevices), assigning value 1 to variable i
 You can use asitis_init() or just init()}
 \usage{
 init()
 }
 \description{
-Initialisation of Nunito font, Cairo bitmap printing type
+Initialisation of Nunito font (by showtext), Cairo bitmap printing type, assigning function custom_png to png function name (instead of png from grDevices), assigning value 1 to variable i
 You can use asitis_init() or just init()
 }
 \examples{

@@ -25,11 +25,10 @@ printA <- function(p = NA){
     r = grid::unit(0.1, "npc"), gp = grid::gpar(fill = "#e6ebed", col = "#e6ebed")
   )
   
-  p <- p + ggplot2::theme(plot.margin = margin(t = 0.04, r = 0.07, b = 0.03, l = 0.035, unit = "npc"),
+  p <- p + ggplot2::theme(plot.margin = margin(t = 0.05, r = 0.07, b = 0.03, l = 0.035, unit = "npc"),
                  panel.border = element_rect(color = "#e6ebed"),
                  plot.background = element_blank(),
-                 #axis.ticks = element_line(color = "#96acb5"),
-                 #axis.text = element_text(color = "#58595b")
+                 plot.title = element_text(vjust = 2),
   )
   
   if(is.null(dev.list())){
@@ -44,7 +43,6 @@ printA <- function(p = NA){
     pa <- ggplot2::ggplotGrob(p)
     showtext::showtext_auto()
   }
-  
   
   grid::grid.newpage()
   kombo <- grid::gTree(children = grid::gList(obd, obd1, obd2, pa))

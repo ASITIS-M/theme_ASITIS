@@ -1,4 +1,4 @@
 .onAttach <- function(libname, pkgname) {
   packageStartupMessage("Verze ", packageVersion(pkgname), 
-                        " balíčku ", pkgname, ". Pro přednastavení můžete použít funkci asitis_init()")
+                        " balíčku ", pkgname, ". You can use function asitis_init() for all necessary settings")
 }
