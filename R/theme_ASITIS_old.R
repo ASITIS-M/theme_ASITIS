@@ -1,7 +1,9 @@
 #' ASITIS company ggplot theme
-#' version 1.2.1
+#' version 1.2.1 old style modification
 #'
-#' based on ggplot2 theme_bw
+#' Modification of standard style theme_ASITIS to replicate old plot style used before summer 2024
+#' Use with standard print function, not with printA intended for use with theme_ASITIS
+#' 
 #' @param angle.x boolean, if true, values on x axis will be 15° slanted
 #' @param title.on.center boolean, if true, plot title will be aligned to center
 #' @param no.grid boolean, if true, plot will not have visible grid
@@ -21,11 +23,9 @@ theme_ASITIS <- function(angle.x = FALSE,
     ggplot2::theme(axis.title.x = element_text(size = 20),
                    axis.title.y = element_text(size = 20),
                    strip.text.x = element_text(size = 30),
-                   axis.text=element_text(size=15, color = "#58595b"),
+                   axis.text=element_text(size=15),
                    strip.placement = "outside",
-                   text = element_text(family = "nunito", color = "black"),
-                   panel.border = element_rect(color = "#58595b"),
-                   axis.ticks = element_line(color = "#96acb5"),
+                   text = element_text(family = "nunito", color = "#00344B"),
                    plot.title = element_text(size = 25, lineheight = 1.25),
                    plot.subtitle = element_text(size = 20),
                    plot.background = element_blank(),
@@ -38,13 +38,13 @@ theme_ASITIS <- function(angle.x = FALSE,
                    legend.key.spacing.y = unit(0.15, "lines"),
                    legend.key.size = unit(1.25, "lines"),
                    legend.background = element_blank()
-                   )
+    )
   
   if(title.on.center){
     th <- th + ggplot2::theme(plot.title = element_text(hjust = 0.5),
-                     plot.title.position = "plot")  
+                              plot.title.position = "plot")  
   }
-
+  
   if(angle.x){
     th <- th + ggplot2::theme(axis.text.x = element_text(angle = 15, vjust = 0.5 ))
   }
@@ -54,13 +54,13 @@ theme_ASITIS <- function(angle.x = FALSE,
   }
   
   if(double.axis){
-    th <- th + ggplot2::theme(axis.title.y.right = element_text(angle = 90, color = "#9e302d"),
-                              axis.title.y.left = element_text(angle = 90, color = "#2d5274"))
+    th <- th + ggplot2::theme(axis.title.y.right = element_text(angle = 90, color = "#801517"),
+                              axis.title.y.left = element_text(angle = 90, color = "#00344B"))
   }
   
   if(double.axis.reverse){
-    th <- th + ggplot2::theme(axis.title.y.left = element_text(angle = 90, color = "#9e302d"),
-                              axis.title.y.right = element_text(angle = 90, color = "#2d5274"))
+    th <- th + ggplot2::theme(axis.title.y.left = element_text(angle = 90, color = "#801517"),
+                              axis.title.y.right = element_text(angle = 90, color = "#00344B"))
   }
   
   

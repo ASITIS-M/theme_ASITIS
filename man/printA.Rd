@@ -3,7 +3,9 @@
 \name{printA}
 \alias{printA}
 \title{printA
-Printing ggplot with rectangular background with rounded corners}
+Printing ggplot with rectangular background with rounded corners
+Use it instead of standard print function
+Should be used preferably with ggplot style theme_ASITIS}
 \usage{
 printA(p = NA)
 }
@@ -13,6 +15,8 @@ printA(p = NA)
 \description{
 printA
 Printing ggplot with rectangular background with rounded corners
+Use it instead of standard print function
+Should be used preferably with ggplot style theme_ASITIS
 }
 \examples{
 printA(ggplot(df <- data.frame(x <- 1:2, y = 1:2), aes(x = x))+geom_line(aes(y = y))+theme_ASITIS())

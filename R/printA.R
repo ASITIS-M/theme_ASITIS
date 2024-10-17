@@ -1,5 +1,7 @@
 #' printA
-#' Printing ggplot with rectangular background with rounded corners 
+#' Printing ggplot with rectangular background with rounded corners
+#' Use it instead of standard print function
+#' Should be used preferably with ggplot style theme_ASITIS
 #'
 #' @param p ggplot object
 #' @examples 
