@@ -14,7 +14,7 @@
 #' p + theme_ASITIS();
 #' p + theme_ASITIS(angle.x = T, title.on.center = T);
 #' @export
-theme_ASITIS <- function(angle.x = FALSE,
+theme_ASITIS_old <- function(angle.x = FALSE,
                          title.on.center = FALSE,
                          no.grid = FALSE,
                          double.axis = FALSE,
