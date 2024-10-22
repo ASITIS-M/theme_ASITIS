@@ -9,7 +9,7 @@
 #' get_colors_ASITIS(8, dark = TRUE);
 #' @export
 get_colors_ASITIS <- function(n = NA, dark = F) {
-  colors_ASITIS_data <- list(
+  colors_ASITIS <- list(
     "základní modrá světlá" = "#6297cc",
     "neutrální barva světlá" = "#9e9fa0",
     "kontrastní oranžová světlá" = "#db7f3d",
