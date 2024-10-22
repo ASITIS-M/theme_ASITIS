@@ -2,6 +2,10 @@
 
 export(asitis_init)
 export(custom_png)
+export(get_colors_ASITIS)
+export(get_colors_ASITIS_marketing)
+export(get_colours_ASITIS)
+export(get_colours_ASITIS_marketing)
 export(init)
 export(printA)
 export(theme_ASITIS)

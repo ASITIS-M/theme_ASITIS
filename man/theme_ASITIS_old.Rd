@@ -16,7 +16,7 @@ theme_ASITIS_old(
 \arguments{
 \item{angle.x}{boolean, if true, values on x axis will be 15° slanted}
 
-\item{title.on.center}{boolean, if true, plot title will be aligned to center}
+\item{title.on.center}{boolean, if true, plot title will be aligned to the center}
 
 \item{no.grid}{boolean, if true, plot will not have visible grid}
 
@@ -28,8 +28,8 @@ theme_ASITIS_old(
 ggplot theme
 }
 \description{
-Modification of standard style theme_ASITIS to replicate old plot style used before summer 2024
-Use with standard print function, not with printA intended for use with theme_ASITIS
+Modification of standard style theme_ASITIS to replicate old plot style used before summer 2024.
+Use with standard print function, not with printA intended for use with theme_ASITIS.
 }
 \examples{
 p + theme_ASITIS();

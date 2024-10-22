@@ -1,11 +1,11 @@
 #' ASITIS company ggplot theme
 #' version 1.2.1 old style modification
 #'
-#' Modification of standard style theme_ASITIS to replicate old plot style used before summer 2024
-#' Use with standard print function, not with printA intended for use with theme_ASITIS
+#' Modification of standard style theme_ASITIS to replicate old plot style used before summer 2024.
+#' Use with standard print function, not with printA intended for use with theme_ASITIS.
 #' 
 #' @param angle.x boolean, if true, values on x axis will be 15° slanted
-#' @param title.on.center boolean, if true, plot title will be aligned to center
+#' @param title.on.center boolean, if true, plot title will be aligned to the center
 #' @param no.grid boolean, if true, plot will not have visible grid
 #' @param double.axis boolean, if true, plot will have both right (red colored) and left (blue colored) y axes
 #' @param double.axis.reverse boolean, if true, plot will have both right (blue colored) and left (red colored) y axes
